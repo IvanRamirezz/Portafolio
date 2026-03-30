@@ -1,42 +1,47 @@
-const sections = document.querySelectorAll("section");
-const navItems = document.querySelectorAll(".nav-item");
+document.addEventListener("DOMContentLoaded", () => {
 
-const observer = new IntersectionObserver(
+  const sections = document.querySelectorAll<HTMLElement>("section[id]");
 
-  entries => {
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>(".nav-item");
 
-    entries.forEach(entry => {
+  const setActive = (id: string) => {
 
-      if(entry.isIntersecting){
+    navLinks.forEach(link => {
 
-        const id = entry.target.id;
+      link.classList.remove("active");
 
-        navItems.forEach(link => {
+      if(link.dataset.section === id){
 
-          link.classList.remove("active");
-
-          if(link.getAttribute("data-section") === id){
-
-            link.classList.add("active");
-
-          }
-
-        });
+        link.classList.add("active");
 
       }
 
     });
 
-  },
+  };
 
-  {
-    threshold:0.6
-  }
+  const observer = new IntersectionObserver(
 
-);
+    entries => {
 
-sections.forEach(section => {
+      entries.forEach(entry => {
 
-  observer.observe(section);
+        if(entry.isIntersecting){
+
+          setActive(entry.target.id);
+
+        }
+
+      });
+
+    },
+
+    {
+      rootMargin: "-40% 0px -40% 0px"
+    }
+
+  );
+
+  sections.forEach(section => observer.observe(section));
 
 });
