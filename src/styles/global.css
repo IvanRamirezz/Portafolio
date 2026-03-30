@@ -1,0 +1,52 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type:y mandatory;
+}
+
+body{
+
+  background:#1C152E;
+  color:white;
+
+  font-family:
+
+  system-ui,
+  sans-serif;
+
+}
+
+.eyebrow{
+
+  font-size:12px;
+  letter-spacing:2px;
+
+  color:#38bdf8;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  opacity:0.9;
+
+}
+
+.eyebrow::after{
+
+  content:"";
+
+  height:1px;
+  width:40px;
+
+  background:linear-gradient(
+    90deg,
+    #38bdf8,
+    transparent
+  );
+
+}

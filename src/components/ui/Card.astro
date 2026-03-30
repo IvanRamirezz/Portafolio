@@ -1,0 +1,58 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="card">
+
+  <slot />
+
+</div>
+
+<style>
+
+.card{
+  width:100%;
+  max-width:1100px;
+  padding:60px;
+  border-radius:20px;
+  position:relative;
+  background:linear-gradient(
+    180deg,
+    rgba(2,6,23,0.9),
+    rgba(2,6,23,0.95)
+  );
+  border:1px solid rgba(56,189,248,0.25);
+  box-shadow:
+    0 0 0 1px rgba(56,189,248,0.15),
+    0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* borde degradado */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:20px;
+  padding:1px;
+
+  background:linear-gradient(
+    90deg,
+    #38bdf8,
+    #22c55e
+  );
+
+  pointer-events:none; /* 🔥 FIX */
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+
+</style>

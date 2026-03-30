@@ -1,0 +1,66 @@
+---
+interface Props {
+
+  title: string;
+  org: string;
+  year: string;
+
+}
+
+const { title, org, year } = Astro.props;
+---
+
+<div class="cert">
+
+  <div>
+
+    <strong>
+      {title}
+    </strong>
+
+    <div class="org">
+      {org}
+    </div>
+
+  </div>
+
+  <span class="year">
+
+    {year}
+
+  </span>
+
+</div>
+
+<style>
+
+.cert{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:20px;
+
+}
+
+.org{
+
+  color:#64748b;
+  font-size:13px;
+
+}
+
+.year{
+
+  font-size:12px;
+
+  background:rgba(148,163,184,0.15);
+
+  padding:6px 10px;
+
+  border-radius:6px;
+
+}
+
+</style>

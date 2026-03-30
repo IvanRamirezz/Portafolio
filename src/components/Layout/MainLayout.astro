@@ -1,0 +1,23 @@
+---
+import "../../styles/global.css";
+import Navbar from "../../components/ui/Navbar.astro";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+
+    <Navbar />
+
+    <main>
+      <slot />
+    </main>
+
+    <script type="module" src="/src/scripts/scrollSpy.ts"></script>
+
+  </body>
+</html>

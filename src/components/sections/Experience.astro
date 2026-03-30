@@ -1,0 +1,159 @@
+---
+import SectionWrapper from "../ui/SectionWrapper.astro";
+import Card from "../ui/Card.astro";
+import Tabs from "../ui/Tabs.astro";
+import TimelineItem from "../ui/TimelineItem.astro";
+import CertificationItem from "../ui/CertificationItem.astro";
+---
+
+<SectionWrapper id="experience">
+
+  <Card>
+
+    <div class="experience-grid">
+
+      <!-- LEFT COLUMN -->
+
+      <div>
+
+        <span class="eyebrow">
+          03 / PROCESSOR
+        </span>
+
+        <h2>
+          Built for <span>Scale</span>.
+          Proven in Production.
+        </h2>
+
+        <p class="subtitle">
+          Engineering reliable data systems.
+        </p>
+
+        <hr />
+
+        <span class="eyebrow">
+          CERTIFICATIONS
+        </span>
+
+        <CertificationItem
+          title="AWS Certified Data Engineer"
+          org="AWS"
+          year="2025"
+        />
+
+        <CertificationItem
+          title="Azure AI Fundamentals"
+          org="Microsoft"
+          year="2024"
+        />
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+
+      <div>
+
+        <Tabs
+          tabs={[
+            { id: "experience", label: "Experience" },
+            { id: "education", label: "Education" }
+          ]}
+        />
+
+        <!-- EXPERIENCE -->
+
+        <div data-content="experience" class="tab-content active">
+
+          <TimelineItem
+            role="Senior Software Engineer"
+            company="Inovalon"
+            period="2025 - Present"
+            description="Led ETL pipelines using Python."
+          />
+
+          <TimelineItem
+            role="Data Engineer"
+            company="Accenture"
+            period="2021 - 2025"
+            description="Designed AWS pipelines."
+          />
+
+        </div>
+
+        <!-- EDUCATION -->
+
+        <div data-content="education" class="tab-content">
+
+          <TimelineItem
+            role="Ingenieria Telematica"
+            company="UPIITA - IPN"
+            period="2021 - June 2026"
+            description="Focus on software engineering."
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </Card>
+
+</SectionWrapper>
+
+<style>
+
+.experience-grid{
+
+  display:grid;
+
+  grid-template-columns: 1fr 1.2fr;
+
+  gap:40px;
+
+}
+
+.subtitle{
+
+  color:#94a3b8;
+
+  margin:10px 0 20px;
+
+}
+
+.tab-content{
+
+  display:none;
+
+}
+
+.tab-content.active{
+
+  display:block;
+
+}
+
+hr{
+
+  border:none;
+
+  border-top:1px solid rgba(148,163,184,0.2);
+
+  margin:25px 0;
+
+}
+
+h2 span{
+
+  color:#38bdf8;
+
+}
+
+.tab-content{
+  display:none;
+}
+
+.tab-content.active{
+  display:block;
+}
+</style>
