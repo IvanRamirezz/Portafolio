@@ -1,6 +1,7 @@
 ---
 import "../../styles/global.css";
 import Navbar from "../../components/ui/Navbar.astro";
+
 ---
 
 <html lang="es">
@@ -16,8 +17,8 @@ import Navbar from "../../components/ui/Navbar.astro";
     <main>
       <slot />
     </main>
-
-    <script type="module" src="/src/scripts/scrollSpy.ts"></script>
-
+        <script>
+        import "../../scripts/scrollSpy.ts";
+        </script>
   </body>
 </html>

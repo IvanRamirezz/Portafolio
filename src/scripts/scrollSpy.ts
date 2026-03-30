@@ -2,11 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sections = document.querySelectorAll<HTMLElement>("section[id]");
 
-  const navLinks = document.querySelectorAll<HTMLAnchorElement>(".nav-item");
+  const navItems = document.querySelectorAll<HTMLAnchorElement>(".nav-item");
 
-  const setActive = (id: string) => {
+  const setActive = (id:string) => {
 
-    navLinks.forEach(link => {
+    navItems.forEach(link => {
 
       link.classList.remove("active");
 
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     {
-      rootMargin: "-40% 0px -40% 0px"
+      rootMargin:"-45% 0px -45% 0px"
     }
 
   );
