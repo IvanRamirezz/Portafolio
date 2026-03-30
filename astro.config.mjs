@@ -4,6 +4,6 @@ export default defineConfig({
 
   site: 'https://IvanRamirezz.github.io',
 
-  base: '/Portafolio-web/'
+  base: '/Portafolio/'
 
 })
