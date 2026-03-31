@@ -6,12 +6,20 @@ import SectionWrapper from "../ui/SectionWrapper.astro";
 
   <div class="content">
 
+    <span class="label">
+      01 / ESQUEMA // INICIALIZANDO PORTAFOLIO
+    </span>
+
     <h1>
-      Ivan Ramírez
+      Ivan Martin Ramírez Rodriguez
     </h1>
 
-    <p>
-      Python & AWS Data Engineer
+    <p class="role">
+      Ingeniero Telemático
+    </p>
+
+    <p class="tagline">
+      Desarrollo, automatización y testing de sistemas de software
     </p>
 
   </div>
@@ -21,11 +29,103 @@ import SectionWrapper from "../ui/SectionWrapper.astro";
 <style>
 
 .content{
+
+  min-height:75vh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
   text-align:center;
+
+  gap:10px;
+
 }
 
+/* texto superior */
+
+.label{
+
+  font-size:14px;
+
+  letter-spacing:3px;
+
+  color:#64748b;
+
+  font-family:monospace;
+
+}
+
+/* nombre */
+
 h1{
-  font-size:64px;
+
+  font-size:60px;
+
+  font-weight:800;
+
+  margin:10px 0;
+
+  background:linear-gradient(
+    90deg,
+    #e5e7eb,
+    #93c5fd
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+}
+
+/* rol */
+
+.role{
+
+  font-size:26px;
+
+  color:#cbd5f5;
+
+}
+
+/* descripción */
+
+.tagline{
+
+  font-size:20px;
+
+  color:#38bdf8;
+
+  opacity:.9;
+
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+  h1{
+
+    font-size:48px;
+
+  }
+
+  .role{
+
+    font-size:20px;
+
+  }
+
+  .tagline{
+
+    font-size:16px;
+
+  }
+
 }
 
 </style>
