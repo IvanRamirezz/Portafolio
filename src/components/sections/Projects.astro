@@ -1,9 +1,69 @@
 ---
 import SectionWrapper from "../ui/SectionWrapper.astro";
+import Card from "../ui/Card.astro";
+import ProjectCard from "../ui/ProjectCard.astro";
+import { projects } from "../../data/project";
 ---
 
 <SectionWrapper id="projects">
 
-  <h2>Projects</h2>
+<Card>
+
+<h2>
+Where Ideas Become <span>Systems</span>.
+</h2>
+
+<div class="grid">
+
+{projects.map(project => (
+
+<ProjectCard {...project} />
+
+))}
+
+</div>
+
+</Card>
 
 </SectionWrapper>
+
+<script type="module">
+
+import { initProjectModal } from "../../scripts/projectModal";
+import { projects } from "../../data/projects";
+
+initProjectModal(projects);
+
+</script>
+
+<style>
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+margin-top:40px;
+
+}
+
+@media(max-width:900px){
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+h2 span{
+
+color:#38bdf8;
+
+}
+
+</style>

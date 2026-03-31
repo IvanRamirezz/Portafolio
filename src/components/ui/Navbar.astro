@@ -2,56 +2,151 @@
 
 const menu = [
   { id: "intro", label: "Intro" },
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
+  { id: "about", label: "Sobre mí" },
+  { id: "experience", label: "Experiencia" },
+  { id: "projects", label: "Proyectos" },
 ];
 
 ---
 
 <nav class="navbar">
 
-  {menu.map(item => (
+  <div class="nav-links">
 
-    <a
-      href={`#${item.id}`}
-      class="nav-item"
-      data-section={item.id}
-    >
-      {item.label}
-    </a>
+    {menu.map(item => (
 
-  ))}
+      <a
+        href={`#${item.id}`}
+        class="nav-item"
+        data-section={item.id}
+      >
+        {item.label}
+      </a>
+
+    ))}
+
+  </div>
+
+  <div class="divider"></div>
+
+  <a
+  href="/CV_RamirezIvan.pdf"
+  target="_blank"
+  class="cv-btn"
+  >
+    CV
+  </a>
 
 </nav>
 
 <style>
 
 .navbar{
+
   position:fixed;
   top:20px;
   left:50%;
   transform:translateX(-50%);
+
   display:flex;
-  gap:20px;
-  padding:12px 24px;
+  align-items:center;
+
+  padding:8px 10px;
+
   border-radius:999px;
 
-  background:rgba(0,0,0,0.7);
-  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,0.65);
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,0.06);
+
+  gap:14px;
 
   z-index:1000;
+
+}
+
+/* links */
+
+.nav-links{
+
+  display:flex;
+  gap:18px;
+
 }
 
 .nav-item{
+
   color:#9ca3af;
   text-decoration:none;
-  font-size:14px;
-  transition:0.3s;
+
+  font-size:16px;
+
+  padding:6px 8px;
+
+  border-radius:999px;
+
+  transition:.25s;
+
+}
+
+.nav-item:hover{
+
+  color:white;
+
 }
 
 .nav-item.active{
+
   color:#22c55e;
+
+}
+
+/* linea divisoria */
+
+.divider{
+
+  width:1px;
+  height:18px;
+
+  background:rgba(255,255,255,0.08);
+
+}
+
+/* botón CV */
+
+.cv-btn{
+
+  display:flex;
+  align-items:center;
+  gap:6px;
+
+  padding:6px 12px;
+
+  font-size:14px;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  color:#e5e7eb;
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  transition:.25s;
+
+}
+
+.cv-btn:hover{
+
+  background:rgba(34,197,94,0.12);
+
+  border-color:#22c55e;
+
+  color:white;
+
 }
 
 </style>
