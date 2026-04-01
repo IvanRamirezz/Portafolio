@@ -21,30 +21,37 @@ import CertificationItem from "../ui/CertificationItem.astro";
         </span>
 
         <h2>
-          Built for <span>Scale</span>.
-          Proven in Production.
+            Experiencia <span>real</span>.
+            Resultados comprobados.
         </h2>
 
         <p class="subtitle">
-          Engineering reliable data systems.
+          Experiencia en pruebas de software, validación de datos y desarrollo web.
         </p>
 
         <hr />
 
         <span class="eyebrow">
-          CERTIFICATIONS
+          CURSOS
         </span>
 
         <CertificationItem
-          title="AWS Certified Data Engineer"
-          org="AWS"
+          title="Git y Control de Versiones"
+          org="UDEMY"
           year="2025"
         />
 
         <CertificationItem
-          title="Azure AI Fundamentals"
-          org="Microsoft"
-          year="2024"
+          title="Oracle AI Foundations Associate"
+          org="Cisco"
+          year="2025"
+        />
+
+        <CertificationItem
+          title="Introducción al IoT y
+                 Transformación Digital"
+          org="Cisco"
+          year="2025"
         />
 
       </div>
@@ -55,8 +62,8 @@ import CertificationItem from "../ui/CertificationItem.astro";
 
         <Tabs
           tabs={[
-            { id: "experience", label: "Experience" },
-            { id: "education", label: "Education" }
+            { id: "experience", label: "Experiencia" },
+            { id: "education", label: "Educación" }
           ]}
         />
 
@@ -65,18 +72,21 @@ import CertificationItem from "../ui/CertificationItem.astro";
         <div data-content="experience" class="tab-content active">
 
           <TimelineItem
-            role="Senior Software Engineer"
-            company="Inovalon"
-            period="2025 - Present"
-            description="Led ETL pipelines using Python."
+            role="Test Developer Intern"
+            company="IBM"
+            period="2025 Junio - 2026 Febrero"
+            description="Ejecución de pruebas funcionales y de regresión para app web y móvil.
+            Diseño de casos de prueba, seguimiento de defectos y validación de reglas de negocio 
+            utilizando Jira, ALM y ServiceNow."
           />
 
-          <TimelineItem
-            role="Data Engineer"
-            company="Accenture"
-            period="2021 - 2025"
-            description="Designed AWS pipelines."
-          />
+            <TimelineItem
+            role="Web Development Intern"
+            company="Actipulse"
+            period="2024 Noviembre - 2025 Mayo"
+            description={`Desarrollo de interfaces web responsivas con HTML, CSS y Tailwind.
+            Integración de API y automatización de validación de datos mediante Python y Postman.`}
+            />
 
         </div>
 
@@ -85,10 +95,12 @@ import CertificationItem from "../ui/CertificationItem.astro";
         <div data-content="education" class="tab-content">
 
           <TimelineItem
-            role="Ingenieria Telematica"
+            role="Ingeniería Telemática"
             company="UPIITA - IPN"
-            period="2021 - June 2026"
-            description="Focus on software engineering."
+            period="2021 - Present"
+            description="Formación en redes, desarrollo de software y análisis de datos.
+            Desarrollo de laboratorio en realidad virtual para medición de dispersión y 
+            atenuación en fibras ópticas."
           />
 
         </div>
@@ -156,4 +168,31 @@ h2 span{
 .tab-content.active{
   display:block;
 }
+
+/* tablet */
+@media (max-width: 900px){
+
+  .experience-grid{
+
+    grid-template-columns: 1fr;
+    gap:30px;
+
+  }
+
+}
+
+/* mobile */
+@media (max-width: 600px){
+
+  h2{
+    font-size:26px;
+    line-height:1.2;
+  }
+
+  .subtitle{
+    font-size:14px;
+  }
+
+}
+
 </style>

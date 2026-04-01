@@ -1,66 +1,41 @@
 export const projects = [
 {
-id:"recicanje",
-
-title:"Wireguard en Raspi 4",
-
-description:"Red social sobre reciclaje",
-
+id:"wireguard",
+title:"VPN con Wireguard en Raspi 4",
+description:"Configuración de una VPN utilizando WireGuard en Raspberry Pi 4 para acceso remoto seguro a servicios y red privada.",
 image:`${import.meta.env.BASE_URL}/images/raspi.jpg`,
-
-tags:["docker","mongodb","firebase"],
-
-content:`
-<h2>Wireguard en Raspi 4</h2>
-
-<p>
-Red social con CRUD, chat en tiempo real y autenticación.
-</p>
-
-<ul>
-<li>MongoDB Atlas</li>
-<li>Firebase Auth</li>
-<li>Firestore realtime</li>
-</ul>
-`
+tags:["docker","linux","vpn","raspberrypi"],
 },
 
 {
-id:"script",
-
-title:"Oracle Script",
-
-description:"Script OCI",
-
-image:`${import.meta.env.BASE_URL}/images/python.png`,
-
-tags:["python"],
-
-content:`
-<h2>Oracle Cloud Script</h2>
-
-<p>
-Automatiza creación de instancias free tier.
-</p>
-`
+id:"nextcloud",
+title:"Nube privada con Nextcloud",
+description:"Servidor de nube privada con Nextcloud en Raspberry Pi utilizando Docker para almacenamiento y sincronización segura de archivos.",
+image:`${import.meta.env.BASE_URL}/images/nextcloud.jpg`,
+tags:["docker","linux","cloud","networking"],
 },
 
 {
-id:"vr-lab",
-title:"Laboratorio VR de Redes Ópticas",
-description:"Simulador educativo",
-image:"/images/vr.png",
-tags:["unity","vr","supabase"]
+id:"LabVR",
+title:"Laboratorio RV de Redes Ópticas",
+description:"Simulador en realidad virtual para el aprendizaje de dispersión y atenuación en fibras ópticas.",
+image:`${import.meta.env.BASE_URL}/images/Logo.png`,
+tags:["unity","sql","astro","supabase"],
 },
 
 {
-id:"vr-lab",
-title:"Laboratorio VR de Redes Ópticas",
-description:"Simulador educativo",
-image:"/images/vr.png",
-tags:["unity","vr","supabase"]
+id:"app-script",
+title:"Data Cleaning con Apps Script",
+description:"Automatización de limpieza y validación de datos desde Google Forms, generando archivos CSV para el registro masivo de estudiantes en plataforma educativa.",
+image:`${import.meta.env.BASE_URL}/images/Appscrit.png`,
+tags:["javascript","google sheet","csv"]
+},
+
+{
+id:"Axoloop",
+title:"AxoLoop",
+description:"App móvil para gestionar suscripciones y tarjetas de crédito, con seguimiento de fechas de corte, recordatorios y visualización de pagos recurrentes.",
+image:`${import.meta.env.BASE_URL}/images/AppIcon.png`,
+tags:["swift","android studio","finance"]
 }
-
-
-
 ];

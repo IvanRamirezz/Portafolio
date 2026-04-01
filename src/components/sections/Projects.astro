@@ -10,7 +10,7 @@ import { projects } from "../../data/project";
 <Card>
 
 <h2>
-Where Ideas Become <span>Systems</span>.
+Donde las ideas se convierten en <span>realidad</span>.
 </h2>
 
 <div class="grid">
@@ -29,7 +29,6 @@ Where Ideas Become <span>Systems</span>.
 
 <script type="module">
 
-import { initProjectModal } from "../../scripts/projectModal";
 import { projects } from "../../data/projects";
 
 initProjectModal(projects);
@@ -40,29 +39,64 @@ initProjectModal(projects);
 
 .grid{
 
-display:grid;
+  display:grid;
 
-grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(3,1fr);
 
-gap:20px;
+  gap:15px;
 
-margin-top:40px;
+  margin-top:18px;
+
+}
+
+/* laptops 13" */
+@media (max-width:1350px){
+
+  .grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+  }
 
 }
 
-@media(max-width:900px){
+/* tablet */
+@media (max-width:900px){
 
-.grid{
+  .grid{
 
-grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+  }
 
 }
+
+/* mobile */
+@media (max-width:600px){
+
+  .grid{
+
+    grid-template-columns:1fr;
+
+    gap:16px;
+
+  }
+
+  h2{
+
+    font-size:26px;
+
+    line-height:1.2;
+
+  }
 
 }
 
 h2 span{
 
-color:#38bdf8;
+  color:#38bdf8;
 
 }
 

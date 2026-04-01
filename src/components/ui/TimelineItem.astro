@@ -39,7 +39,7 @@ const { role, company, period, description } = Astro.props;
 
 .timeline-item{
 
-  padding:24px;
+  padding:10px;
 
   border-radius:14px;
 
@@ -93,4 +93,35 @@ p{
 
 }
 
+.header{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+
+}
+
+/* mobile */
+@media (max-width:600px){
+
+  .header{
+
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+
+  }
+
+  h3{
+    font-size:18px;
+  }
+
+  .badge{
+
+    font-size:11px;
+
+  }
+
+}
 </style>
