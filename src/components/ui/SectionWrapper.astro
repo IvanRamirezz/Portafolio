@@ -15,13 +15,24 @@ const { id } = Astro.props;
 <style>
 
 .section{
-  height:100vh;
+  min-height:100vh;
 
   display:flex;
   justify-content:center;
   align-items:center;
 
   scroll-snap-align:start;
+}
+
+/* let content taller than one viewport (stacked mobile layouts) breathe instead of overlapping the next section */
+@media (max-width:900px){
+
+  .section{
+
+    padding:100px 0;
+
+  }
+
 }
 
 </style>

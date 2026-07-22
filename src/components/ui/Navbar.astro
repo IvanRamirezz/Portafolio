@@ -83,6 +83,18 @@ const menu = [
 
   z-index:1000;
 
+  max-width:94vw;
+
+  overflow-x:auto;
+
+  scrollbar-width:none;
+
+}
+
+.navbar::-webkit-scrollbar{
+
+  display:none;
+
 }
 
 /* links */
@@ -104,6 +116,8 @@ const menu = [
   padding:6px 8px;
 
   border-radius:999px;
+
+  white-space:nowrap;
 
   transition:.25s;
 
@@ -165,6 +179,47 @@ const menu = [
   border-color:#22c55e;
 
   color:white;
+
+}
+
+/* mobile */
+@media (max-width:600px){
+
+  .navbar{
+
+    top:12px;
+    gap:8px;
+    padding:6px 8px;
+
+  }
+
+  .nav-links{
+
+    gap:10px;
+
+  }
+
+  .nav-item{
+
+    font-size:13px;
+    padding:5px 6px;
+
+  }
+
+  .divider,
+  .github-btn,
+  .cv-btn{
+
+    flex-shrink:0;
+
+  }
+
+  .cv-btn{
+
+    font-size:12px;
+    padding:5px 9px;
+
+  }
 
 }
 

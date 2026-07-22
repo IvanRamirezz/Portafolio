@@ -9,6 +9,18 @@ html{
   scroll-snap-type:y mandatory;
 }
 
+/* stacked mobile layouts can make a section taller than one viewport;
+   "mandatory" snapping fights the user trying to scroll through it */
+@media (max-width:900px){
+
+  html{
+
+    scroll-snap-type:y proximity;
+
+  }
+
+}
+
 body{
 
   background:#1C152E;
