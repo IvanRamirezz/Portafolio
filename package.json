@@ -15,5 +15,9 @@
     "@tsparticles/slim": "^3.9.1",
     "astro": "^6.1.1",
     "tsparticles": "^3.9.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^5.9.3"
   }
 }
