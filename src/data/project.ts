@@ -21,6 +21,7 @@ title:"Laboratorio RV de Redes Ópticas",
 description:"Simulador en realidad virtual para el aprendizaje de dispersión y atenuación en fibras ópticas.",
 image:`${import.meta.env.BASE_URL}/images/Logo.png`,
 tags:["unity","sql","astro","supabase"],
+url:"https://dashboard-web-six-umber.vercel.app",
 },
 
 {
@@ -32,10 +33,20 @@ tags:["javascript","google sheet","csv"]
 },
 
 {
-id:"Axoloop",
-title:"AxoLoop",
-description:"App móvil para gestionar suscripciones y tarjetas de crédito, con seguimiento de fechas de corte, recordatorios y visualización de pagos recurrentes.",
-image:`${import.meta.env.BASE_URL}/images/AppIcon.png`,
-tags:["swift","android studio","finance"]
+id:"neocodes",
+title:"NeoCodes — Tienda de códigos digitales",
+description:"Tienda de códigos digitales desarrollada como freelance, conectada a un bot de Telegram para automatizar ventas y con panel administrativo para subir juegos y administrar el sitio.",
+image:`${import.meta.env.BASE_URL}/images/neocodes.png`,
+tags:["freelance","ecommerce","telegram-bot","admin-panel"],
+url:"https://family-manager-eight.vercel.app/tienda",
+},
+
+{
+id:"actipulse",
+title:"Actipulse Neuroscience",
+description:"Sitio web corporativo de Actipulse Neuroscience, desarrollado durante mi práctica profesional como Web Development Intern.",
+image:`${import.meta.env.BASE_URL}/images/actipulse.png`,
+tags:["astro","css","tailwind"],
+url:"https://actipulse.com",
 }
 ];
